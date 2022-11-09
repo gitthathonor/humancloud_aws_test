@@ -136,19 +136,19 @@ public class RecruitControllerTest {
                 resultActions.andExpect(MockMvcResultMatchers.jsonPath("$.code").value(1));
         }
 
-        // @Test
-        // public void recruitmain_test() throws Exception {
-        // // given , 한 페이지에서 볼 목록 개수 10 = 0 개 / 0 = 10 개
+        @Test
+        public void recruitmain_test() throws Exception {
+                // given , 한 페이지에서 볼 목록 개수 10 = 0 개 / 0 = 10 개
 
-        // // when
-        // ResultActions resultActions = mvc.perform(
-        // MockMvcRequestBuilders.get("/")
-        // .accept(APPLICATION_JSON));
-        // // then
-        // resultActions.andExpect(MockMvcResultMatchers.status().isOk());
-        // resultActions.andExpect(MockMvcResultMatchers.jsonPath("$.code").value(1));
+                // when
+                ResultActions resultActions = mvc.perform(
+                                MockMvcRequestBuilders.get("/")
+                                                .accept(APPLICATION_JSON));
+                // then
+                resultActions.andExpect(MockMvcResultMatchers.status().isOk());
+                resultActions.andExpect(MockMvcResultMatchers.jsonPath("$.code").value(1));
 
-        // }
+        }
 
         @Test
         public void recruitdetail_test() throws Exception {
