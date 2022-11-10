@@ -34,15 +34,15 @@ public class RecruitController {
   private final ApplyService applyService;
 
   // main
-  @GetMapping("/")
-  public ResponseDto<?> main() {
-    return new ResponseDto<>(1, "성공", recruitService.메인공고목록보기());
-  }
-
   // @GetMapping("/")
-  // public String main() {
-  // return "<h1>home</h1>";
+  // public ResponseDto<?> main() {
+  // return new ResponseDto<>(1, "성공", recruitService.메인공고목록보기());
   // }
+
+  @GetMapping("/")
+  public String main() {
+    return "<h1>home</h1>";
+  }
 
   // @GetMapping("recruit/update/{id}")
   // public ResponseDto<?> updateFrom(@PathVariable(required = false) Integer id,
